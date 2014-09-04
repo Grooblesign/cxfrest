@@ -35,6 +35,8 @@ public class MailWebService {
 	@Path("/")
 	public Response postdMessage(MailMessage message) {
 
+		String username = "admin";
+		String password = "admin";
 		String queueName = "Mail-Incoming";
 		String queueUrl = "tcp://localhost:61616";
 
@@ -43,7 +45,7 @@ public class MailWebService {
 		ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(queueUrl);
 
 		try {
-			Connection connection = connectionFactory.createConnection("admin", "admin");
+			Connection connection = connectionFactory.createConnection(username, password);
 			connection.start();
 
 			Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);

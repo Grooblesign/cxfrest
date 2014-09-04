@@ -6,10 +6,6 @@
                         http://cxf.apache.org/schemas/jaxrs.xsd">
 
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
-	<!-- 
-	<import resource="classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml" />
-	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
- 	-->
 
 	<bean id="mailWebService" class="uk.me.paulgarner.cxfrest.webservices.MailWebService" />
 	<bean id="userWebService" class="uk.me.paulgarner.cxfrest.webservices.UserWebService" />
